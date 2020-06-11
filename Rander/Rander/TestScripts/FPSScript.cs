@@ -15,7 +15,7 @@ namespace Rander.TestScripts
 
         public override void Draw()
         {
-            if ((float)MyGame.Gametime.TotalGameTime.TotalSeconds > TimeToPass)
+            if ((float)Game.Gametime.TotalGameTime.TotalSeconds > TimeToPass)
             {
                 Parent.GetComponent<Text2DComponent>().Txt = "FPS: " + FramesPassed;
                 TimeToPass += 1;

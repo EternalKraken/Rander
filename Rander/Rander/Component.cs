@@ -1,4 +1,6 @@
-﻿namespace Rander
+﻿using System;
+
+namespace Rander
 {
     public class Component
     {

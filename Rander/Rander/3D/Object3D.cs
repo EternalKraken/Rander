@@ -17,7 +17,7 @@ namespace Rander._3D
             ObjectName = objectName;
             Position = position;
             Size = size;
-            MyGame.Objects3D.Add(objectName, this);
+            Game.Objects3D.Add(objectName, this);
         }
 
         public Object3D(string objectName, Vector3 position, Vector3 size, Component3D[] components)
@@ -31,7 +31,7 @@ namespace Rander._3D
                 AddComponent(com);
             }
 
-            MyGame.Objects3D.Add(objectName, this);
+            Game.Objects3D.Add(objectName, this);
         }
 
         public virtual void Update()

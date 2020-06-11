@@ -14,7 +14,7 @@ namespace Rander
         public static MouseState MouseInfo;
         public static Point Position { get { return MouseInfo.Position; } }
         public static Point PositionDelta { get { return MouseDelta; } }
-        public static bool IsVisible { get { return MyGame.gameWindow.IsMouseVisible; } set { SetVisibility(value); } }
+        public static bool IsVisible { get { return Game.gameWindow.IsMouseVisible; } set { SetVisibility(value); } }
         public static bool CursorLocked { set { Lck = value; } get { return Lck; } }
         static bool Lck = false;
         static Point MousePrev;
@@ -55,7 +55,7 @@ namespace Rander
 
         public static void SetVisibility(bool visible)
         {
-            MyGame.gameWindow.IsMouseVisible = visible;
+            Game.gameWindow.IsMouseVisible = visible;
         }
     }
 }

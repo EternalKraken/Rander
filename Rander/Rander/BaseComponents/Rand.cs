@@ -29,12 +29,12 @@ namespace Rander
 
         public static float RandomFloat(float Min, float Max)
         {
-            return (float)(Random.NextDouble() * Max + Min);
+            return (float)(Random.NextDouble() * (Max - Min) + Min);
         }
 
         public static double RandomDouble(double Min, double Max)
         {
-            return Random.NextDouble() * Max + Min;
+            return Random.NextDouble() * (Max - Min) + Min;
         }
     }
 }

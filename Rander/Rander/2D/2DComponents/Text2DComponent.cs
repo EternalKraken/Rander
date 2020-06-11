@@ -92,7 +92,7 @@ namespace Rander._2D
 
         public override void Draw()
         {
-            MyGame.Drawing.DrawString(Font, Txt, Parent.Position, Parent.Color, Parent.Rotation, Pivot, FontSize, SpriteEffects.None, 0);
+            Game.Drawing.DrawString(Font, Txt, Parent.Position, Parent.Color, Parent.Rotation, Pivot, FontSize, SpriteEffects.None, Parent.Layer);
         }
     }
 }

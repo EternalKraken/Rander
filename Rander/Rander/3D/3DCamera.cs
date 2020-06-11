@@ -21,7 +21,7 @@ namespace Rander._3D
 
         public Camera3D(Vector3 Position, Vector3 Rotation)
         {
-            aspectRatio = MyGame.graphics.PreferredBackBufferWidth / (float)MyGame.graphics.PreferredBackBufferHeight;
+            aspectRatio = Game.graphics.PreferredBackBufferWidth / (float)Game.graphics.PreferredBackBufferHeight;
             Projection = Matrix.CreatePerspectiveFieldOfView(FOV, aspectRatio, nearClipPlane, farClipPlane);
 
             CameraRotation = Rotation;

@@ -11,13 +11,13 @@ namespace Rander._3D
 
         public MeshRenderer3DComponent(VertexPositionTexture[] vertexes)
         {
-            ObjectRender = new BasicEffect(MyGame.graphics.GraphicsDevice);
+            ObjectRender = new BasicEffect(Game.graphics.GraphicsDevice);
             Vertexes = vertexes;
         }
 
         public MeshRenderer3DComponent(VertexPositionTexture[] vertexes, Color color)
         {
-            ObjectRender = new BasicEffect(MyGame.graphics.GraphicsDevice);
+            ObjectRender = new BasicEffect(Game.graphics.GraphicsDevice);
             Vertexes = vertexes;
             ObjectRender.DiffuseColor = color.ToVector3();
         }
@@ -28,13 +28,13 @@ namespace Rander._3D
             ObjectRender.World = Matrix.CreateScale(Parent.Size) * Matrix.CreateFromYawPitchRoll(Parent.Rotation.X, Parent.Rotation.Y, Parent.Rotation.Z) * Matrix.CreateTranslation(Parent.Position);
 
             // Sets the object for rendering
-            ObjectRender.View = MyGame.Cam3D.LocalMatrix;
-            ObjectRender.Projection = MyGame.Cam3D.Projection;
+            ObjectRender.View = Game.Cam3D.LocalMatrix;
+            ObjectRender.Projection = Game.Cam3D.Projection;
 
             foreach (EffectPass pass in ObjectRender.CurrentTechnique.Passes)
             {
                 pass.Apply();
-                MyGame.graphics.GraphicsDevice.DrawUserPrimitives(PrimitiveType.TriangleList, Vertexes, 0, Vertexes.Length / 3);
+                Game.graphics.GraphicsDevice.DrawUserPrimitives(PrimitiveType.TriangleList, Vertexes, 0, Vertexes.Length / 3);
             }
         }
     }

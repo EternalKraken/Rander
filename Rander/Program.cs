@@ -13,7 +13,7 @@ namespace Rander
         [STAThread]
         static void Main()
         {
-            using (var game = new MyGame())
+            using (var game = new Game())
                 game.Run();
         }
     }

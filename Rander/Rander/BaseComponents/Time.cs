@@ -20,12 +20,12 @@ namespace Rander
 
         public override void Update()
         {
-            TimeSinceStart = (float)MyGame.Gametime.TotalGameTime.TotalSeconds;
+            TimeSinceStart = (float)Game.Gametime.TotalGameTime.TotalSeconds;
         }
 
         public override void Draw()
         {
-            FrameTime = (float)MyGame.Gametime.ElapsedGameTime.TotalSeconds;
+            FrameTime = (float)Game.Gametime.ElapsedGameTime.TotalSeconds;
         }
     }
 }

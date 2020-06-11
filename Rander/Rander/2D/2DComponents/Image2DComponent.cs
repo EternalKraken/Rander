@@ -27,7 +27,7 @@ namespace Rander._2D
 
         public override void Draw()
         {
-            MyGame.Drawing.Draw(Texture, new Rectangle((int)Parent.Position.X, (int)Parent.Position.Y, (int)Parent.Size.X, (int)Parent.Size.Y), new Rectangle((int)Parent.Position.X, (int)Parent.Position.Y, (int)Parent.Size.X, (int)Parent.Size.Y), Parent.Color, Parent.Rotation, Pivot, SpriteEffects.None, 0);
+            Game.Drawing.Draw(Texture, new Rectangle((int)Parent.Position.X, (int)Parent.Position.Y, (int)Parent.Size.X, (int)Parent.Size.Y), new Rectangle((int)Parent.Position.X, (int)Parent.Position.Y, (int)Parent.Size.X, (int)Parent.Size.Y), Parent.Color, Parent.Rotation, Pivot, SpriteEffects.None, Parent.Layer);
         }
     }
 }
